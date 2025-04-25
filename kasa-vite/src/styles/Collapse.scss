@@ -1,0 +1,101 @@
+.collapse {
+  background: #ff6060;
+  border-radius: 8px;
+  margin-bottom: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+  width: 100%;
+  max-width: 1240px;
+  min-width: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* Fix: prevent sibling collapses from growing with open one */
+  align-self: flex-start;
+  /* Remove min-height or flex stretch if present */
+}
+@media (max-width: 1240px) {
+  .collapse {
+    max-width: 98vw;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .collapse {
+    width: 98vw;
+    min-width: unset;
+  }
+}
+@media (max-width: 600px) {
+  .collapse {
+    width: 100%;
+    min-width: unset;
+  }
+}
+.collapse-header {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 18px 24px 18px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.collapse-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+.collapse-arrow.up {
+  transform: rotate(180deg);
+}
+.collapse-content {
+  background: #fff;
+  color: #ff6060;
+  font-size: 1.03rem;
+  padding: 18px 22px 18px 18px;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+@keyframes collapseOpen {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.about-collapses, .apartment-details-collapses {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto 40px auto;
+}
+@media (max-width: 900px) {
+  .about-collapses, .apartment-details-collapses {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .about-collapses, .apartment-details-collapses {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .collapse {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+  }
+}

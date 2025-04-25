@@ -1,0 +1,25 @@
+@import './variables.scss';
+@import './Navbar.scss';
+@import './Banner.scss';
+@import './ApartmentGrid.scss';
+@import './Footer.scss';
+
+body, html {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #222;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+a, .navbar__links a, .footer__text, .apartment-title, .apartment-tag, .collapse-header, .collapse-content, .banner-title, .apartment-location, .apartment-details-title, .apartment-host-name, .apartment-rating, .apartment-details-collapses, .apartment-card, .apartment-details-container, .about-container {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}

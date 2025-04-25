@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.footer {
+  width: 100%;
+  height: 12rem;
+  min-width: 100%;
+  left: 0;
+  bottom: 0;
+  background: $footer-bg;
+  color: $text-white;
+  padding: 44px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.footer__logo-img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 35px;
+
+}
+
+
+.footer__text {
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  color: $text-white;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 24px 0 14px 0;
+  }
+  .footer__logo {
+    font-size: 1.8rem;
+  }
+  .footer__text {
+    font-size: 0.95rem;
+  }
+}

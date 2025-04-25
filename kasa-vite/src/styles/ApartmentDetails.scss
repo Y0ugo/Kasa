@@ -1,0 +1,123 @@
+.apartment-details-container {
+  background: #fff;
+  border-radius: 12px;
+  margin: 32px auto 40px auto;
+  padding: 0 0 40px 0;
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.apartment-details-gallery {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.apartment-details-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.apartment-details-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.apartment-details-main {
+  flex: 1 1 60%;
+  min-width: 240px;
+}
+.apartment-details-title {
+  color: #ff6060;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.apartment-location {
+  color: #888;
+  font-size: 1rem;
+}
+.apartment-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.apartment-tag {
+  background: #ff6060;
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.apartment-details-host-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  min-width: 180px;
+}
+.apartment-host {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #ff6060;
+}
+.apartment-host-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.apartment-host-picture {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ff6060;
+}
+.apartment-rating {
+  display: flex;
+  gap: 2px;
+  font-size: 1.45rem;
+}
+.star {
+  color: #e3e3e3;
+}
+.star.filled {
+  color: #ff6060;
+}
+.apartment-details-collapses {
+  display: flex;
+  gap: 32px;
+  margin-top: 18px;
+}
+.apartment-details-collapses > .collapse {
+  flex: 1 1 48%;
+  min-width: 260px;
+}
+@media (max-width: 900px) {
+  .apartment-details-gallery {
+    height: 180px;
+  }
+  .apartment-details-main-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .apartment-details-collapses {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .apartment-details-collapses > .collapse {
+    min-width: unset;
+    width: 100%;
+  }
+}
