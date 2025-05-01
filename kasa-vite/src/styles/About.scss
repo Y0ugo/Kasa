@@ -19,7 +19,6 @@
   border-radius: 18px;
 }
 .about-collapses {
-  width: 80%;
   max-width: 1240px;
   margin: 0 auto 40px auto;
   display: flex;
@@ -37,9 +36,11 @@
 @media (max-width: 700px) {
   .about-container, .about-collapses {
     max-width: 98vw;
-    width: 100%;
-    padding-left: 4px;
-    padding-right: 4px;
+    width: 100vw;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
   }
   .about-banner {
     height: 100px;
@@ -51,5 +52,11 @@
   }
   .about-collapses {
     gap: 12px;
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
   }
 }
