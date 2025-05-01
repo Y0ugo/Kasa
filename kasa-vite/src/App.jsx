@@ -6,6 +6,7 @@ import ApartmentGrid from './components/ApartmentGrid';
 import ApartmentDetails from './components/ApartmentDetails';
 import About from './components/About';
 import Footer from './components/Footer';
+import Error404 from './components/Error404';
 
 function Layout() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function Layout() {
         <Route path="/" element={<ApartmentGrid />} />
         <Route path="/apartment/:id" element={<ApartmentDetails />} />
         <Route path="/a-propos" element={<About />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
     </div>
