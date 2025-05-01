@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Collapse from './Collapse';
+import Slider from './Slider';
 import '../styles/ApartmentDetails.scss';
+import '../styles/Slider.scss';
 
 function ApartmentDetails() {
   const { id } = useParams();
@@ -21,7 +23,7 @@ function ApartmentDetails() {
   return (
     <div className="apartment-details-container">
       <div className="apartment-details-gallery">
-        <img className="apartment-details-cover" src={apartment.cover} alt={apartment.title} />
+        <Slider pictures={apartment.pictures} alt={apartment.title} />
       </div>
       <div className="apartment-details-main-row">
         <div className="apartment-details-main">
