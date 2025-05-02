@@ -18,12 +18,17 @@ function Slider({ pictures, alt = '' }) {
   return (
     <div className="slider-container">
       {total > 1 && (
-        <button className="slider-arrow left" onClick={goToPrev} aria-label="Image précédente">&#10094;</button>
-      )}
-      <img className="slider-image" src={pictures[current]} alt={alt + ' ' + (current + 1)} />
-      {total > 1 && (
-        <button className="slider-arrow right" onClick={goToNext} aria-label="Image suivante">&#10095;</button>
-      )}
+  <button className="slider-arrow left" onClick={goToPrev} aria-label="Image précédente">
+    <span className="arrow-shape" />
+  </button>
+)}
+<img className="slider-image" src={pictures[current]} alt={alt + ' ' + (current + 1)} />
+{total > 1 && (
+  <button className="slider-arrow right" onClick={goToNext} aria-label="Image suivante">
+    <span className="arrow-shape" />
+  </button>
+)}
+
       <div className="slider-counter">
         {current + 1} / {total}
       </div>
