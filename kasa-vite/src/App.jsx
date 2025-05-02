@@ -7,6 +7,7 @@ import ApartmentDetails from './components/ApartmentDetails';
 import About from './components/About';
 import Footer from './components/Footer';
 import Error404 from './components/Error404';
+import './styles/App.scss';
 
 function Layout() {
   const location = useLocation();
@@ -15,12 +16,14 @@ function Layout() {
     <div className="app-container">
       <Navbar />
       {showBanner && <Banner />}
-      <Routes>
-        <Route path="/" element={<ApartmentGrid />} />
-        <Route path="/apartment/:id" element={<ApartmentDetails />} />
-        <Route path="/a-propos" element={<About />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<ApartmentGrid />} />
+          <Route path="/apartment/:id" element={<ApartmentDetails />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

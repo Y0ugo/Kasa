@@ -8,7 +8,7 @@ function Collapse({ title, content }) {
     <div className={`collapse${open ? ' open' : ''}`}>
       <button className="collapse-header" onClick={() => setOpen((o) => !o)}>
         <span>{title}</span>
-        <span className={`collapse-arrow${open ? ' up' : ''}`}>▲</span>
+        <span className={`collapse-arrow${open ? ' up' : ''}`}></span>
       </button>
       {open && <div className="collapse-content">{content}</div>}
     </div>

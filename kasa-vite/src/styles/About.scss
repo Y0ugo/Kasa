@@ -1,3 +1,4 @@
+
 .about-container {
   max-width: 1240px;
   width: 100%;
@@ -28,15 +29,15 @@
 }
 @media (max-width: 1240px) {
   .about-container, .about-collapses {
-    max-width: 98vw;
+    max-width: 98%;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media (max-width: 700px) {
-  .about-container, .about-collapses {
-    max-width: 98vw;
-    width: 100vw;
+  .about-container {
+    max-width: 90%;
+    width: 100%;
     min-width: 0;
     padding-left: 0;
     padding-right: 0;
@@ -52,7 +53,7 @@
   }
   .about-collapses {
     gap: 12px;
-    width: 100vw;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
