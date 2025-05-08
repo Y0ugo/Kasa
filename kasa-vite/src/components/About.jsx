@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/About.scss';
 import Collapse from './Collapse';
+import banner2 from '../assets/banner2.png';
 
 const aboutItems = [
   {
@@ -25,7 +26,7 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-banner">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" alt="About Kasa" />
+        <img src={banner2} alt="Bannière À propos" />
       </div>
       <div className="about-collapses">
         {aboutItems.map((item, idx) => (
