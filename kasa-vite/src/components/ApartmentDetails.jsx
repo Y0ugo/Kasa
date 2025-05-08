@@ -2,22 +2,35 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Collapse from './Collapse';
 import Slider from './Slider';
+import Error404 from './Error404';
 import '../styles/ApartmentDetails.scss';
 import '../styles/Slider.scss';
 
 function ApartmentDetails() {
   const { id } = useParams();
   const [apartment, setApartment] = useState(null);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     fetch('/src/data/Appartements.json')
       .then((res) => res.json())
       .then((data) => {
         const found = Array.isArray(data) ? data.find((apt) => apt.id === id) : null;
-        setApartment(found);
+        if (found) {
+          setApartment(found);
+          setNotFound(false);
+        } else {
+          setApartment(null);
+          setNotFound(true);
+        }
+      })
+      .catch(() => {
+        setApartment(null);
+        setNotFound(true);
       });
   }, [id]);
 
+  if (notFound) return <Error404 />;
   if (!apartment) return <div>Chargement...</div>;
 
   return (

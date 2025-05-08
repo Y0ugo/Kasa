@@ -123,20 +123,20 @@
   .about-collapses, .apartment-details-collapses {
     flex-direction: column;
     gap: 10px;
-    align-items: stretch; /* Aligner les collapses de manière à occuper toute la largeur */
-    padding: 0; /* Aucune marge ou padding sur le conteneur */
-    width: 100%; /* Assurer que le conteneur occupe toute la largeur */
-    max-width: 100%; /* Limite la largeur du conteneur à 100% */
-    margin: 0; /* Supprime les marges */
+    align-items: stretch; 
+    padding: 0; 
+    width: 100%; 
+    max-width: 95%; 
+    margin: 0;
   }
 
   .collapse {
-    padding-left: 0; /* Aucun padding gauche */
-    padding-right: 0; /* Aucun padding droite */
-    width: 100%; /* Assure que la collapse occupe toute la largeur */
-    min-width: unset; /* Retirer toute restriction de largeur minimum */
-    max-width: 100%; /* Limiter la largeur à 100% */
-    margin: 0; /* Supprimer toute marge qui pourrait empêcher l'expansion */
+    padding-left: 0; 
+    padding-right: 0; 
+    width: 100%; 
+    min-width: unset; 
+    max-width: 100%; 
+    margin: 0;
   }
 
 }

@@ -128,4 +128,34 @@
     min-width: unset;
     width: 100%;
   }
+  .apartment-details-host-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95%;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+    min-width: 180px;
+  }
+  .apartment-rating {
+    display: flex;
+    gap: 2px;
+    font-size: 1.45rem;
+    margin-bottom: 14px;
+  }
+  .apartment-host-name {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 40%;
+  }
+
+  .apartment-host {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    gap: 12px;
+    font-weight: 600;
+    color: #ff6060;
+  }
 }
